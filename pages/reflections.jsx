@@ -43,6 +43,7 @@ const Reflections = ({ content }) => (
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 30px;
+                padding-bottom: 104px;
             }
 
             .title {
@@ -56,6 +57,7 @@ const Reflections = ({ content }) => (
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin: auto 0;
             }
 
             .major-content {
@@ -95,75 +97,29 @@ const Reflections = ({ content }) => (
                 }
             }
 
-            @media only screen and (max-width: 1000px) {
-                .major {
-                    padding-bottom: 80px;
-                }
-            }
-
             @media only screen and (max-width: 800px) {
-                .title {
-                    margin-bottom: 15px;
-                }
-
-                .major {
-                    padding-bottom: 0;
-                }
-
                 .major-content {
                     columns: 2;
                 }
             }
 
-            @media only screen and (max-width: 750px) {
-                .reflection:nth-child(2) {
-                    margin-top: 20px;
-                }
-            }
-
-            @media only screen and (max-width: 700px) {
-                .reflections {
-                    padding: 12px max(calc(50vw - 550px), 20px);
-                }
-
-                .landing {
-                    height: auto;
-                }
-
+            @media only screen and (max-width: 550px) {
                 .title {
                     font-size: 2.5rem;
-                    margin-bottom: 30px;
                 }
-
-                .reflection {
-                    height: auto;
-                    margin-top: 40px;
-                }
-
-                .reflection-title {
-                    font-size: 2rem;
-                }
-            }
-
-            .minor {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
-                margin-bottom: 80px;
-            }
-
-            @media only screen and (max-width: 550px) {
+                
                 .major-content {
                     columns: 1;
                 }
+            }
 
-                .minor {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    gap: 30px;
-                    margin-bottom: 40px;
+            @media only screen and (max-height: 1000px) {
+                .landing {
+                    padding-bottom: 0;
+                }
+                
+                .major {
+                    margin: 0;
                 }
             }
         `}</style>
