@@ -2,9 +2,9 @@
 
 import { split } from "../helpers/text.js"
 
-// Reflection component
+// Split quote reflection component
 
-const Reflection = ({ section, text, image, story, quote }) => (
+const SplitQuote = ({ section, text, image, story, quote }) => (
     <>
         <div className="reflection">
             <h2 className="reflection-title">{section}</h2>
@@ -142,10 +142,6 @@ const Reflection = ({ section, text, image, story, quote }) => (
             }
 
             @media only screen and (max-width: 800px) {
-                .reflection {
-                    margin-top: 30px;
-                }
-
                 .reflection-text {
                     width: 400px;
                 }
@@ -179,16 +175,10 @@ const Reflection = ({ section, text, image, story, quote }) => (
                     margin-top: 8px;
                 }
             }
-
-            @media only screen and (max-width: 550px) {
-                .reflection {
-                    margin-bottom: 30px;
-                }
-            }
         `}</style>
     </>
 )
 
 // Exports
 
-export default Reflection
+export default SplitQuote

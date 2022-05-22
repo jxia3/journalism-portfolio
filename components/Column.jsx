@@ -1,11 +1,15 @@
-// Reflection component
+// Files and modules
 
-const Design = ({ content }) => (
+import { split } from "../helpers/text.js"
+
+// Column reflection component
+
+const Column = ({ section, text, link }) => (
     <>
         <div className="reflection">
-            <h2 className="reflection-title">DESIGN</h2>
-            <div className="reflection-text">{splitParagraphs(content.design)}</div>
-            <a className="sample" href="https://issuu.com/palycampanile/docs/the_campanile_vol._civ_no._4_dec._2021_copy" target="_blank">SAMPLE WORK ➔</a>
+            <h2 className="reflection-title">{section}</h2>
+            <div className="reflection-text">{split(text)}</div>
+            <a className="sample" href={link} target="_blank">SAMPLE WORK ➔</a>
         </div>
         <style jsx>{`
             .reflection {
@@ -14,6 +18,7 @@ const Design = ({ content }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                gap: 1.5rem;
             }
 
             .reflection-title {
@@ -26,7 +31,6 @@ const Design = ({ content }) => (
             .reflection-text {
                 width: 100%;
                 text-indent: 1.5rem;
-                margin-right: 1.5rem;
             }
 
             .sample {
@@ -34,7 +38,6 @@ const Design = ({ content }) => (
                 font-weight: lighter;
                 border: 1px solid #000000;
                 padding: 12px 36px;
-                margin-top: 1.5rem;
             }
 
             @media only screen and (max-width: 700px) {
@@ -46,12 +49,6 @@ const Design = ({ content }) => (
     </>
 )
 
-// Split text into paragraphs
-
-function splitParagraphs(text) {
-    return text.split("\n").map((paragraph, i) => <p className="paragraph" key={i}>{paragraph}</p>)
-}
-
 // Exports
 
-export default Design
+export default Column

@@ -1,7 +1,8 @@
 // Files and modules
 
 import Layout from "../components/Layout"
-import SplitQuote from "../components/split-quote.jsx"
+import SplitQuote from "../components/SplitQuote.jsx"
+import Column from "../components/Column.jsx"
 import { split } from "../helpers/text.js"
 import fs from "fs"
 
