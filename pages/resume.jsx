@@ -21,7 +21,7 @@ const Resume = () => (
                             <h2 className="section-title">CURRENT</h2>
                             <div className="current-content">
                                 <div>Junior at Palo Alto High School</div>
-                                <div>Editor-in-Chief & Staff Writer at The Campanile</div>
+                                <div>Editor-in-Chief at The Campanile</div>
                             </div>
                         </div>
                         <div className="section">

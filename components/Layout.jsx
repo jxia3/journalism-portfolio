@@ -138,7 +138,7 @@ const NavBar = () => (
 const Footer = () => (
     <>
         <footer className="footer">
-            © Jerry Xia 2021
+            © Jerry Xia 2022
         </footer>
         <style jsx>{`
             .footer {
