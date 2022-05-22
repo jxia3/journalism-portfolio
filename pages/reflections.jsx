@@ -1,10 +1,8 @@
 // Files and modules
 
 import Layout from "../components/Layout"
-import ReportingAndWriting from "../components/reflections/ReportingAndWriting-2021B"
-import Design from "../components/reflections/Design-2021B"
-import Photojournalism from "../components/reflections/Photojournalism-2021B"
-import MarketingAndAudienceEngagement from "../components/reflections/MarketingAndAudienceEngagement-2021B"
+import SplitQuote from "../components/split-quote.jsx"
+import { split } from "../helpers/text.js"
 import fs from "fs"
 
 // Reflections page
@@ -17,7 +15,7 @@ const Reflections = ({ content }) => (
                     <div className="title">REFLECTIONS</div>
                     <div className="major">
                         <div className="major-content">
-                            {splitParagraphs(content.majorReflection)}
+                            {split(content.major)}
                             <div className="quote">
                                 <div className="quote-line"></div>
                                 Nothing will ever make obsolete bringing quality news to local communities.
@@ -26,12 +24,21 @@ const Reflections = ({ content }) => (
                         </div>
                     </div>
                 </div>
-                <ReportingAndWriting content={content}></ReportingAndWriting>
-                <div className="minor">
-                    <Design content={content}></Design>
-                    <Photojournalism content={content}></Photojournalism>
-                    <MarketingAndAudienceEngagement content={content}></MarketingAndAudienceEngagement>
-                </div>
+                <SplitQuote
+                    section="REPORTING AND WRITING"
+                    text={content.reporting}
+                    image="/math.jpg"
+                    story={{
+                        title: "Falling behind the curve",
+                        info: "The Campanile 2021 Issue 4 Spotlight",
+                        desc: "PAUSD has de-laned sixth and seventh grade math and plans to finish the de-laning process by the 2022-2023 school year, accelerating all students to Algebra by 8th grade.",
+                        link: "https://thecampanile.org/2021/12/07/falling-behind-the-curve"
+                    }}
+                    quote={{
+                        text: "All we are asking for is for PAUSD to have the same flexible attitude towards math placement as our peer districts.",
+                        author: "Avery Wang, parent"
+                    }}
+                ></SplitQuote>
             </div>
         </Layout>
         <style jsx>{`
@@ -199,29 +206,18 @@ const Reflections = ({ content }) => (
     </>
 )
 
-// Split text into paragraphs
-
-function splitParagraphs(text) {
-    return text.split("\n").map((paragraph, i) => <p className="paragraph" key={i}>{paragraph}</p>)
-}
-
 // Exports
 
 export async function getStaticProps() {
-    // Reflections
+    // Get reflection text
 
-    const [
-        majorReflection,
-        reportingAndWriting,
-        design,
-        photojournalism,
-        marketingAndAudienceEngagement
-    ] = await Promise.all([
-        readFile("data/major-2021B.txt"),
-        readFile("data/reporting-and-writing-2021B.txt"),
-        readFile("data/design-2021B.txt"),
-        readFile("data/photojournalism-2021B.txt"),
-        readFile("data/marketing-and-audience-engagement-2021B.txt")
+    const year = "2021B"
+    const [ major, reporting, design, photo, marketing ] = await Promise.all([
+        readFile("data/" + year + "/major.txt"),
+        readFile("data/" + year + "/reporting.txt"),
+        readFile("data/" + year + "/design.txt"),
+        readFile("data/" + year + "/photo.txt"),
+        readFile("data/" + year + "/marketing.txt")
     ])
 
     // Page properties
@@ -230,11 +226,11 @@ export async function getStaticProps() {
         props: {
             page: "Reflections",
             content: {
-                majorReflection,
-                reportingAndWriting,
+                major,
+                reporting,
                 design,
-                photojournalism,
-                marketingAndAudienceEngagement
+                photo,
+                marketing
             }
         }
     }

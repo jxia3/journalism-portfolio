@@ -1,25 +1,29 @@
+// Files and modules
+
+import { split } from "../helpers/text.js"
+
 // Reflection component
 
-const Reflection = ({ content }) => (
+const Reflection = ({ section, text, image, story, quote }) => (
     <>
         <div className="reflection">
-            <h2 className="reflection-title">REPORTING AND WRITING</h2>
+            <h2 className="reflection-title">{section}</h2>
             <div className="reflection-content">
-                <div className="reflection-text">{splitParagraphs(content.reportingAndWriting)}</div>
+                <div className="reflection-text">{split(text)}</div>
                 <div className="content">
                     <div className="story">
-                        <img className="image" src="/math.jpg"></img>
+                        <img className="image" src={image}></img>
                         <div className="story-info">
-                            <div className="story-title">Falling behind the curve</div>
-                            <div className="story-about">The Campanile 2021 Issue 4 Spotlight</div>
-                            <div className="story-desc">PAUSD has de-laned sixth and seventh grade math and plans to finish the de-laning process by the 2022-2023 school year, accelerating all students to Algebra by 8th grade.</div>
-                            <a className="story-link" href="https://thecampanile.org/2021/12/07/falling-behind-the-curve" target="_blank">READ STORY ➔</a>
+                            <div className="story-title">{story.title}</div>
+                            <div className="story-info">{story.info}</div>
+                            <div className="story-desc">{story.desc}</div>
+                            <a className="story-link" href={story.link} target="_blank">READ STORY ➔</a>
                         </div>
                     </div>
                     <div className="quote">
                         <div className="quote-line"></div>
-                        "All we are asking for is for PAUSD to have the same flexible attitude towards math placement as our peer districts."
-                        <div className="quote-by">- Avery Wang, parent</div>
+                        "{quote.text}"
+                        <div className="quote-by">- {quote.author}</div>
                         <div className="quote-line"></div>
                     </div>
                 </div>
@@ -32,7 +36,6 @@ const Reflection = ({ content }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                margin-bottom: 80px;
             }
 
             .reflection-title {
@@ -95,7 +98,7 @@ const Reflection = ({ content }) => (
                 margin-bottom: 4px;
             }
 
-            .story-about {
+            .story-info {
                 font-size: 0.9rem;
             }
 
@@ -185,12 +188,6 @@ const Reflection = ({ content }) => (
         `}</style>
     </>
 )
-
-// Split text into paragraphs
-
-function splitParagraphs(text) {
-    return text.split("\n").map((paragraph, i) => <p className="paragraph" key={i}>{paragraph}</p>)
-}
 
 // Exports
 
