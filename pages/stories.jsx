@@ -39,17 +39,16 @@ const Story = ({ data, flip }) => {
             <style jsx>{`
                 .story {
                     width: 100%;
-                    height: 24vh;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    margin: 30px 0;
+                    margin: 20px 0;
                 }
 
                 .image {
                     width: 350px;
-                    height: 100%;
+                    height: 250px;
                     object-fit: contain;
                     margin-left: ${flip ? "50px" : "0"};
                     margin-right: ${flip ? "0" : "50px"};
@@ -99,13 +98,13 @@ const Story = ({ data, flip }) => {
 
                 @media only screen and (max-width: 700px) {
                     .story {
-                        height: auto;
                         flex-direction: column;
                     }
 
                     .image {
                         width: 100%;
                         height: auto;
+                        max-height: 50vh;
                         margin: 0 0 18px 0;
                     }
                 }

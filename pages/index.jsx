@@ -269,46 +269,6 @@ const Home = () => (
                     width: 250px;
                 }
             }
-
-            @media only screen and (max-height: 800px) {
-                @keyframes expand-left {
-                    0% {
-                        transform: scale(1) rotate(90deg);
-                    }
-                    100% {
-                        transform: translateY(-24vh) scale(10) rotate(90deg);
-                    }
-                }
-
-                @keyframes expand-right {
-                    0% {
-                        transform: scale(1) rotate(-90deg);
-                    }
-                    100% {
-                        transform: translateY(24vh) scale(10) rotate(-90deg);
-                    }
-                }
-            }
-
-            @media only screen and (max-height: 600px) {
-                @keyframes expand-left {
-                    0% {
-                        transform: scale(1) rotate(90deg);
-                    }
-                    100% {
-                        transform: translateY(-20vh) scale(10) rotate(90deg);
-                    }
-                }
-
-                @keyframes expand-right {
-                    0% {
-                        transform: scale(1) rotate(-90deg);
-                    }
-                    100% {
-                        transform: translateY(20vh) scale(10) rotate(-90deg);
-                    }
-                }
-            }
         `}</style>
         <style jsx global>{`
             @media only screen and (max-width: 650px) {

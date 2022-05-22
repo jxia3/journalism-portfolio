@@ -1,4 +1,19 @@
 [{
+    "title": "Council plans $150 million electric grid renovation",
+    "description": "Facing limited grid capacity and aging infrastructure, Palo Alto's Utility Advisory Commission is pushing to modernize the city's electric grid to meet the city's electrification and emission reduction goals.",
+    "image": "/electric.png",
+    "link": "https://thecampanile.org/2022/04/09/council-plans-150-million-electric-grid-renovation"
+}, {
+    "title": "More students watching sports through piracy",
+    "description": "The illegal broadcasting of pirated sports streams, also known as cord cutting, lets people bypass paid subscription services like ESPN, Netflix or Hulu to access live sports content for free.",
+    "image": "/piracy.png",
+    "link": "https://thecampanile.org/2022/03/17/more-students-watching-sports-through-piracy"
+}, {
+    "title": "A changing campus: Paly over the years",
+    "description": "With over 100 years of history, Paly has seen dramatic shifts in its campus, student culture, academic offerings, and technology.",
+    "image": "/staff.png",
+    "link": "https://thecampanile.org/2022/02/07/a-changing-campus"
+}, {
     "title": "Falling behind the curve",
     "description": "PAUSD has de-laned sixth and seventh grade math and plans to finish the de-laning process by the 2022-2023 school year, accelerating all students to Algebra by 8th grade.",
     "image": "/math.jpg",
