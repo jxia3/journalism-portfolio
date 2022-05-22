@@ -1,6 +1,18 @@
 // Files and modules
 
-const crypto = require("crypto")
+import crypto from "crypto"
+import fs from "fs"
+
+// Read text file content
+
+function readFile(file) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(file, (error, data) => {
+            if (error) return reject(error)
+            resolve(data.toString())
+        })
+    })
+}
 
 // Split text into paragraphs
 
@@ -16,5 +28,6 @@ function split(text) {
 // Exports
 
 export {
+    readFile,
     split
 }

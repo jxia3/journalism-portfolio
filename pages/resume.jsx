@@ -181,8 +181,7 @@ const Resume = () => (
 
                 @media only screen and (max-width: 700px) {
                     .resume {
-                        height: auto;
-                        padding: 12px max(calc(50vw - 550px), 20px) 24px max(calc(50vw - 550px), 20px);
+                        padding: 12px max(calc(50vw - 550px), 20px) 48px max(calc(50vw - 550px), 20px);
                     }
 
                     .divider {
