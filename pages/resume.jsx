@@ -17,21 +17,28 @@ const Resume = () => (
                 <div className="divider"></div>
                 <div className="content">
                     <div className="left">
-                        <div className="section" style={{ marginBottom: "26px" }}>
+                        <div className="section" style={{ marginBottom: "24px" }}>
                             <h2 className="section-title">CURRENT</h2>
-                            <div className="current-item" style={{ marginTop: "18px" }}>Junior at Palo Alto High School</div>
-                            <div className="current-item">Newsletter Editor & Staff Writer at The Campanile</div>
+                            <div className="current-content">
+                                <div>Junior at Palo Alto High School</div>
+                                <div>Editor-in-Chief & Staff Writer at The Campanile</div>
+                            </div>
                         </div>
                         <div className="section">
                             <h2 className="section-title">EXPERIENCE</h2>
                             <div className="section-item">
+                                <div className="item-title">Editor-in-Chief at The Campanile</div>
+                                <div className="date">March 2022 to present</div>
+                                <div className="item-desc">Writing, designing, and publishing newsletters delivering the latest Campanile news to subscribers every issue using Mailchimp</div>
+                            </div>
+                            <div className="section-item">
                                 <div className="item-title">Newsletter Editor at The Campanile</div>
-                                <div className="date">November 2021 to present</div>
+                                <div className="date">November 2021 to March 2022</div>
                                 <div className="item-desc">Writing, designing, and publishing newsletters delivering the latest Campanile news to subscribers every issue using Mailchimp</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Staff Writer at The Campanile</div>
-                                <div className="date">August 2021 to present</div>
+                                <div className="date">August 2021 to March 2022</div>
                                 <div className="item-desc">Interviewing sources, writing news, opinion, lifestyle, and sports articles for The Campanile and designing newspaper pages with Adobe InDesign to be printed</div>
                             </div>
                             <div className="section-item">
@@ -42,19 +49,19 @@ const Resume = () => (
                         </div>
                     </div>
                     <div className="right">
-                        <div className="section" style={{ marginBottom: "12px" }}>
+                        <div className="section" style={{ marginBottom: "24px" }}>
                             <h2 className="section-title">SKILLS</h2>
                             <div className="section-item">
-                                <div className="item-title">Web Development & React.js</div>
-                                <div className="item-desc">Designing and building websites with HTML, CSS and JavaScript and creating responsive, stateful web applications with React.js and Next.js</div>
+                                <div className="item-title">News Writing</div>
+                                <div className="item-desc">Gathering interview from sources, writing news stories and editing articles for publication</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Adobe InDesign & Illustrator</div>
                                 <div className="item-desc">Using the Adobe stack to create graphics and design professional pages and page layouts</div>
                             </div>
                             <div className="section-item">
-                                <div className="item-title">News Writing</div>
-                                <div className="item-desc">Gathering interview from sources, writing news stories and editing articles for publication</div>
+                                <div className="item-title">Web Development & React.js</div>
+                                <div className="item-desc">Designing and building websites with HTML, CSS and JavaScript and creating responsive, stateful web applications with React.js and Next.js</div>
                             </div>
                         </div>
                         <div className="section">
@@ -73,7 +80,7 @@ const Resume = () => (
             </div>
             <style jsx>{`
                 .resume {
-                    height: calc(100vh - 140px);
+                    min-height: calc(100vh - 140px);
                     padding: 24px max(calc(50vw - 550px), 20px);
                 }
 
@@ -101,7 +108,7 @@ const Resume = () => (
                     width: 100%;
                     height: 0.5px;
                     background-color: #000000;
-                    margin: 36px 0;
+                    margin: 24px 0;
                     transform: scaleX(0);
                     animation: scale 750ms ease-out forwards;
                 }
@@ -128,13 +135,13 @@ const Resume = () => (
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
+                    gap: 18px;
                 }
 
                 .section-title {
                     font-family: "Raleway", sans-serif;
                     font-size: 2rem;
                     font-weight: lighter;
-                    margin-bottom: 8px;
                 }
 
                 .section-item {
@@ -142,7 +149,6 @@ const Resume = () => (
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
-                    margin: 18px 0;
                 }
 
                 .item-title {
@@ -157,12 +163,11 @@ const Resume = () => (
                 }
 
                 .item-desc {
-                    margin-top: 12px;
+                    margin-top: 8px;
                 }
 
-                .current-item {
-                    font-size: 1.1rem;
-                    margin-top: 12px;
+                .current-content {
+                    font-size: 1.2rem;
                 }
 
                 @keyframes scale {
@@ -181,7 +186,7 @@ const Resume = () => (
                     }
 
                     .divider {
-                        margin: 30px 0;
+                        margin: 20px 0;
                     }
 
                     .content {
@@ -191,7 +196,7 @@ const Resume = () => (
                     .left {
                         width: 100%;
                         margin-right: 0;
-                        margin-bottom: 12px;
+                        margin-bottom: 24px;
                     }
 
                     .right {
