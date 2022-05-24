@@ -16,7 +16,7 @@ const Reflection = ({ section, children }) => (
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 30px;
-                margin-bottom: 64px;
+                margin-bottom: 72px;
             }
 
             .reflection-title {
