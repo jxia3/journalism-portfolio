@@ -1,60 +1,34 @@
 // Files and modules
 
+import Reflection from "./Reflection.jsx"
 import { split } from "../helpers/text.js"
 
 // Split quote reflection component
 
 const SplitQuote = ({ section, text, image, story, quote }) => (
     <>
-        <div className="reflection">
-            <h2 className="reflection-title">{section}</h2>
-            <div className="reflection-content">
-                <div className="reflection-text">{split(text)}</div>
-                <div className="content">
-                    <div className="story">
-                        <img className="image" src={image}></img>
-                        <div className="story-info">
-                            <div className="story-title">{story.title}</div>
-                            <div className="story-info">{story.info}</div>
-                            <div className="story-desc">{story.desc}</div>
-                            <a className="story-link" href={story.link} target="_blank">READ STORY ➔</a>
-                        </div>
-                    </div>
-                    <div className="quote">
-                        <div className="quote-line"></div>
-                        "{quote.text}"
-                        <div className="quote-by">- {quote.author}</div>
-                        <div className="quote-line"></div>
+        <Reflection section={section}>
+            <div className="text">{split(text)}</div>
+            <div className="content">
+                <div className="story">
+                    <img className="image" src={image}></img>
+                    <div className="story-info">
+                        <div className="story-title">{story.title}</div>
+                        <div className="story-info">{story.info}</div>
+                        <div className="story-desc">{story.desc}</div>
+                        <a className="story-link" href={story.link} target="_blank">READ STORY ➔</a>
                     </div>
                 </div>
+                <div className="quote">
+                    <div className="quote-line"></div>
+                    "{quote.text}"
+                    <div className="quote-by">- {quote.author}</div>
+                    <div className="quote-line"></div>
+                </div>
             </div>
-        </div>
+        </Reflection>
         <style jsx>{`
-            .reflection {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                gap: 30px;
-            }
-
-            .reflection-title {
-                font-family: "Raleway", sans-serif;
-                font-size: 2.5rem;
-                font-weight: lighter;
-            }
-
-            .reflection-content {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: flex-start;
-                gap: 24px;
-            }
-
-            .reflection-text {
+            .text {
                 width: 500px;
                 text-indent: 1.5rem;
             }
@@ -142,7 +116,7 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
             }
 
             @media only screen and (max-width: 1000px) {
-                .reflection-text {
+                .text {
                     width: 400px;
                 }
 
@@ -183,15 +157,7 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
             }
 
             @media only screen and (max-width: 550px) {
-                .reflection {
-                    gap: 24px;
-                }
-
-                .reflection-content {
-                    flex-direction: column;
-                }
-
-                .reflection-text {
+                .text {
                     width: 100%;
                 }
             }

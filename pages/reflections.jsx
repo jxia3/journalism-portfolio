@@ -40,13 +40,13 @@ const Reflections = ({ content }) => (
                         author: "Jonathan Abendschein, assistant director of Utility Resource Management"
                     }}
                 ></SplitQuote>
+                <SplitDesign
+                    section="DESIGN"
+                    text={content.design}
+                    page="C1-2022-7.pdf"
+                    link="https://issuu.com/palycampanile/docs/the_campanile_4-1-22/16"
+                ></SplitDesign>
             </div>
-            <SplitDesign
-                section="DESIGN"
-                text={content.design}
-                page="C1-2022-7.pdf"
-                link="https://issuu.com/palycampanile/docs/the_campanile_4-1-22/16"
-            ></SplitDesign>
         </Layout>
         <style jsx>{`
             .reflections {
@@ -54,7 +54,7 @@ const Reflections = ({ content }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 24px max(calc(50vw - 550px), 20px) 64px max(calc(50vw - 550px), 20px);
+                padding: 24px max(calc(50vw - 550px), 20px);
             }
 
             .landing {
