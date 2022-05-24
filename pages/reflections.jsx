@@ -131,6 +131,7 @@ const Reflections = ({ content }) => (
             @media only screen and (max-height: 1000px) {
                 .landing {
                     padding-bottom: 0;
+                    margin-bottom: 64px;
                 }
                 
                 .major {
