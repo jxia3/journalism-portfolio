@@ -2,6 +2,7 @@
 
 import Layout from "../components/Layout"
 import SplitQuote from "../components/SplitQuote.jsx"
+import SplitDesign from "../components/SplitDesign.jsx"
 //import Column from "../components/Column.jsx"
 import { readFile, split } from "../helpers/text.js"
 
@@ -40,6 +41,12 @@ const Reflections = ({ content }) => (
                     }}
                 ></SplitQuote>
             </div>
+            <SplitDesign
+                section="DESIGN"
+                text={content.design}
+                page="C1-2022-7.pdf"
+                link="https://issuu.com/palycampanile/docs/the_campanile_4-1-22/16"
+            ></SplitDesign>
         </Layout>
         <style jsx>{`
             .reflections {
@@ -166,9 +173,10 @@ export async function getStaticProps() {
     // Get reflection text
 
     const directory = "data/2022A"
-    const [ major, writing ] = await Promise.all([
+    const [ major, writing, design ] = await Promise.all([
         readFile(directory + "/major.txt"),
-        readFile(directory + "/writing.txt")
+        readFile(directory + "/writing.txt"),
+        readFile(directory + "/design.txt")
     ])
 
     // Page properties
@@ -178,7 +186,8 @@ export async function getStaticProps() {
             page: "Reflections",
             content: {
                 major,
-                writing
+                writing,
+                design
             }
         }
     }
