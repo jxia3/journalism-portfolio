@@ -36,13 +36,13 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                gap: 30px;
             }
 
             .reflection-title {
                 font-family: "Raleway", sans-serif;
                 font-size: 2.5rem;
                 font-weight: lighter;
-                margin-bottom: 30px;
             }
 
             .reflection-content {
@@ -51,12 +51,12 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-start;
+                gap: 24px;
             }
 
             .reflection-text {
                 width: 500px;
                 text-indent: 1.5rem;
-                margin-right: 1.5rem;
             }
 
             .content {
@@ -75,13 +75,13 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
+                gap: 16px;
             }
 
             .image {
                 width: 40%;
                 height: 100%;
                 object-fit: contain;
-                margin-right: 16px;
             }
 
             .story-info {
@@ -141,13 +141,21 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
                 margin-top: 24px;
             }
 
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 1000px) {
                 .reflection-text {
                     width: 400px;
                 }
 
                 .story-desc {
                     margin: 16px 0;
+                }
+
+                .quote-line:first-child {
+                    margin-bottom: 20px;
+                }
+
+                .quote-line:last-child {
+                    margin-top: 20px;
                 }
             }
 
@@ -159,8 +167,6 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
                 .image {
                     width: 100%;
                     height: 150px;
-                    margin-right: 0;
-                    margin-bottom: 16px;
                 }
 
                 .story-link {
@@ -173,6 +179,20 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
 
                 .quote-by {
                     margin-top: 8px;
+                }
+            }
+
+            @media only screen and (max-width: 550px) {
+                .reflection {
+                    gap: 24px;
+                }
+
+                .reflection-content {
+                    flex-direction: column;
+                }
+
+                .reflection-text {
+                    width: 100%;
                 }
             }
         `}</style>

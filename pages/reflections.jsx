@@ -1,7 +1,7 @@
 // Files and modules
 
 import Layout from "../components/Layout"
-//import SplitQuote from "../components/SplitQuote.jsx"
+import SplitQuote from "../components/SplitQuote.jsx"
 //import Column from "../components/Column.jsx"
 import { readFile, split } from "../helpers/text.js"
 
@@ -24,6 +24,21 @@ const Reflections = ({ content }) => (
                         </div>
                     </div>
                 </div>
+                <SplitQuote
+                    section="WRITING AND REPORTING"
+                    text={content.writing}
+                    image="/electric.png"
+                    story={{
+                        title: "Council plans $150 million electric grid renovation",
+                        info: "The Campanile 2022 Issue 7",
+                        desc: "Facing limited grid capacity and aging infrastructure, Palo Alto's Utility Advisory Commission is pushing to modernize the city's electric grid to meet the city's electrification and emission reduction goals.",
+                        link: "https://thecampanile.org/2022/04/09/council-plans-150-million-electric-grid-renovation"
+                    }}
+                    quote={{
+                        text: "That's what we're going to need to do to achieve those really ambitious goals that we need to achieve to control worldwide climate change.",
+                        author: "Jonathan Abendschein, assistant director of Utility Resource Management"
+                    }}
+                ></SplitQuote>
             </div>
         </Layout>
         <style jsx>{`
@@ -32,7 +47,7 @@ const Reflections = ({ content }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 24px max(calc(50vw - 550px), 20px);
+                padding: 24px max(calc(50vw - 550px), 20px) 64px max(calc(50vw - 550px), 20px);
             }
 
             .landing {
@@ -149,9 +164,10 @@ const Reflections = ({ content }) => (
 export async function getStaticProps() {
     // Get reflection text
 
-    const directory = "data/2022A/"
-    const [ major ] = await Promise.all([
-        readFile(directory + "major.txt")
+    const directory = "data/2022A"
+    const [ major, writing ] = await Promise.all([
+        readFile(directory + "/major.txt"),
+        readFile(directory + "/writing.txt")
     ])
 
     // Page properties
@@ -160,7 +176,8 @@ export async function getStaticProps() {
         props: {
             page: "Reflections",
             content: {
-                major
+                major,
+                writing
             }
         }
     }

@@ -43,7 +43,6 @@ const Story = ({ data, flip }) => {
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    margin: 20px 0;
                 }
 
                 .image {
@@ -80,12 +79,6 @@ const Story = ({ data, flip }) => {
                     padding: 12px 36px;
                     border: 1px solid #000000;
                     margin-top: 18px;
-                }
-
-                @media only screen and (max-width: 1000px) {
-                    .story {
-                        margin: 24px 0;
-                    }
                 }
 
                 @media only screen and (max-width: 800px) {
@@ -131,6 +124,7 @@ const Stories = () => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                gap: 40px;
                 padding: 24px max(calc(50vw - 550px), 20px);
             }
 
@@ -142,6 +136,7 @@ const Stories = () => (
 
             @media only screen and (max-width: 700px) {
                 .stories {
+                    gap: 60px;
                     padding: 12px max(calc(50vw - 550px), 20px);
                 }
 
