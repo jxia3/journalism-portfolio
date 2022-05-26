@@ -43,7 +43,7 @@ const Reflections = ({ content }) => (
                 <SplitDesign
                     section="DESIGN"
                     text={content.design}
-                    page="C1-2022-7.pdf"
+                    preview="/C1-2022-7.png"
                     link="https://issuu.com/palycampanile/docs/the_campanile_4-1-22/16"
                 ></SplitDesign>
             </div>

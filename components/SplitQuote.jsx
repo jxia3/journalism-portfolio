@@ -29,17 +29,16 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
         </Reflection>
         <style jsx>{`
             .text {
-                width: 500px;
+                width: 32%;
                 text-indent: 1.5rem;
             }
 
             .content {
-                width: 100%;
-                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                align-items: center;
+                align-items: stretch;
+                flex: 1;
             }
 
             .story {
@@ -116,24 +115,16 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
             }
 
             @media only screen and (max-width: 1000px) {
-                .text {
-                    width: 400px;
-                }
-
                 .story-desc {
                     margin: 16px 0;
-                }
-
-                .quote-line:first-child {
-                    margin-bottom: 20px;
-                }
-
-                .quote-line:last-child {
-                    margin-top: 20px;
                 }
             }
 
             @media only screen and (max-width: 700px) {
+                .text {
+                    width: 35%;
+                }
+                
                 .story {
                     flex-direction: column;
                 }
@@ -158,6 +149,10 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
 
             @media only screen and (max-width: 550px) {
                 .text {
+                    width: 100%;
+                }
+
+                .content {
                     width: 100%;
                 }
             }
