@@ -57,8 +57,9 @@ const Reflections = ({ content }) => (
                         link="https://mailchi.mp/d1220115eccd/the-campanile-issue-5-newsletter-6804905"
                     ></Column>
                     <Column
-                        section="SECTION"
-                        text="my text"
+                        section="NEWS LITERACY"
+                        text={content.literacy}
+                        link="https://thecampanile.org/2021/11/19/ravenswood-school-district-to-lease-unused-east-palo-alto-properties"
                     ></Column>
                 </div>
             </div>
@@ -204,12 +205,13 @@ export async function getStaticProps() {
     // Get reflection text
 
     const directory = "data/2022A"
-    const [ major, writing, design, leadership, marketing ] = await Promise.all([
+    const [ major, writing, design, leadership, marketing, literacy ] = await Promise.all([
         readFile(directory + "/major.txt"),
         readFile(directory + "/writing.txt"),
         readFile(directory + "/design.txt"),
         readFile(directory + "/leadership.txt"),
-        readFile(directory + "/marketing.txt")
+        readFile(directory + "/marketing.txt"),
+        readFile(directory + "/literacy.txt")
     ])
 
     // Page properties
@@ -222,7 +224,8 @@ export async function getStaticProps() {
                 writing,
                 design,
                 leadership,
-                marketing
+                marketing,
+                literacy
             }
         }
     }
