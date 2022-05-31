@@ -3,7 +3,7 @@
 import Layout from "../components/Layout"
 import SplitQuote from "../components/SplitQuote.jsx"
 import SplitDesign from "../components/SplitDesign.jsx"
-//import Column from "../components/Column.jsx"
+import Column from "../components/Column.jsx"
 import { readFile, split } from "../helpers/text.js"
 
 // Reflections page
@@ -46,6 +46,21 @@ const Reflections = ({ content }) => (
                     preview="/C1-2022-7.png"
                     link="https://issuu.com/palycampanile/docs/the_campanile_4-1-22/16"
                 ></SplitDesign>
+                <div className="columns">
+                    <Column
+                        section="LEADERSHIP"
+                        text={content.leadership}
+                    ></Column>
+                    <Column
+                        section="MARKETING"
+                        text={content.marketing}
+                        link="https://mailchi.mp/d1220115eccd/the-campanile-issue-5-newsletter-6804905"
+                    ></Column>
+                    <Column
+                        section="SECTION"
+                        text="my text"
+                    ></Column>
+                </div>
             </div>
         </Layout>
         <style jsx>{`
@@ -54,7 +69,7 @@ const Reflections = ({ content }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 24px max(calc(50vw - 550px), 20px);
+                padding: 24px max(calc(50vw - 550px), 20px) 72px max(calc(50vw - 550px), 20px);
             }
 
             .landing {
@@ -110,6 +125,15 @@ const Reflections = ({ content }) => (
                 margin-top: 24px;
             }
 
+            .columns {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
             @keyframes scale {
                 0% {
                     transform: scaleX(0);
@@ -122,6 +146,13 @@ const Reflections = ({ content }) => (
             @media only screen and (max-width: 800px) {
                 .major-content {
                     columns: 2;
+                }
+            }
+
+            @media only screen and (max-width: 700px) {
+                .columns {
+                    flex-direction: column;
+                    gap: 72px;
                 }
             }
 
@@ -173,10 +204,12 @@ export async function getStaticProps() {
     // Get reflection text
 
     const directory = "data/2022A"
-    const [ major, writing, design ] = await Promise.all([
+    const [ major, writing, design, leadership, marketing ] = await Promise.all([
         readFile(directory + "/major.txt"),
         readFile(directory + "/writing.txt"),
-        readFile(directory + "/design.txt")
+        readFile(directory + "/design.txt"),
+        readFile(directory + "/leadership.txt"),
+        readFile(directory + "/marketing.txt")
     ])
 
     // Page properties
@@ -187,7 +220,9 @@ export async function getStaticProps() {
             content: {
                 major,
                 writing,
-                design
+                design,
+                leadership,
+                marketing
             }
         }
     }

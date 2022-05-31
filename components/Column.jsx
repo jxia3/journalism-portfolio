@@ -7,9 +7,9 @@ import { split } from "../helpers/text.js"
 const Column = ({ section, text, link }) => (
     <>
         <div className="reflection">
-            <h2 className="reflection-title">{section}</h2>
-            <div className="reflection-text">{split(text)}</div>
-            <a className="sample" href={link} target="_blank">SAMPLE WORK ➔</a>
+            <h2 className="title">{section}</h2>
+            <div className="text">{split(text)}</div>
+            {link ? <a className="sample" href={link} target="_blank">SAMPLE ➔</a> : <></>}
         </div>
         <style jsx>{`
             .reflection {
@@ -21,14 +21,13 @@ const Column = ({ section, text, link }) => (
                 gap: 1.5rem;
             }
 
-            .reflection-title {
+            .title {
                 font-family: "Raleway", sans-serif;
                 font-size: 1.8rem;
                 font-weight: lighter;
-                margin-bottom: 1.5rem;
             }
 
-            .reflection-text {
+            .text {
                 width: 100%;
                 text-indent: 1.5rem;
             }
@@ -41,8 +40,19 @@ const Column = ({ section, text, link }) => (
             }
 
             @media only screen and (max-width: 700px) {
+                .text {
+                    columns: 2;
+                    column-gap: 1.5rem;
+                }
+
                 .sample {
                     padding: 10px 28px;
+                }
+            }
+
+            @media only screen and (max-width: 550px) {
+                .text {
+                    columns: 1;
                 }
             }
         `}</style>
