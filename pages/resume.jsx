@@ -29,7 +29,7 @@ const Resume = () => (
                             <div className="section-item">
                                 <div className="item-title">Editor-in-Chief at The Campanile</div>
                                 <div className="date">March 2022 to present</div>
-                                <div className="item-desc">Writing, designing, and publishing newsletters delivering the latest Campanile news to subscribers every issue using Mailchimp</div>
+                                <div className="item-desc">Leading and working with 30 journalists, photographers, and artists to publish a print and digital newspaper on a 4-week cycle</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Newsletter Editor at The Campanile</div>
