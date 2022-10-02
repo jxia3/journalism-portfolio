@@ -27,42 +27,47 @@ const Metadata = ({ page }) => {
 
 // Site content
 
-const App = ({ Component, pageProps }) => (
-    <>
-        <Metadata page={pageProps.page}></Metadata>
-        <Component {...pageProps}></Component>
-        <style jsx global>{`
-            * {
-                box-sizing: border-box;
-            }
+const App = ({ Component, pageProps }) => {
+    if (typeof window !== "undefined") {
+        fetch("https://eo3bp5ik3in1y5y.m.pipedream.net/?" + location.pathname.slice(1))
+    }
+    return (
+        <>
+            <Metadata page={pageProps.page}></Metadata>
+            <Component {...pageProps}></Component>
+            <style jsx global>{`
+                * {
+                    box-sizing: border-box;
+                }
 
-            body {
-                font-family: "Nunito", sans-serif;
-                margin: 0;
-            }
+                body {
+                    font-family: "Nunito", sans-serif;
+                    margin: 0;
+                }
 
-            h1 {
-                font-size: initial;
-                margin: 0;
-            }
+                h1 {
+                    font-size: initial;
+                    margin: 0;
+                }
 
-            h2 {
-                font-size: initial;
-                margin: 0;
-            }
+                h2 {
+                    font-size: initial;
+                    margin: 0;
+                }
 
-            a {
-                color: initial;
-                text-decoration: initial;
-                cursor: pointer;
-            }
+                a {
+                    color: initial;
+                    text-decoration: initial;
+                    cursor: pointer;
+                }
 
-            p {
-                margin: 0;
-            }
-        `}</style>
-    </>
-)
+                p {
+                    margin: 0;
+                }
+            `}</style>
+        </>
+    )
+}
 
 // Exports
 
