@@ -138,7 +138,10 @@ const NavBar = () => (
 const Footer = () => (
     <>
         <footer className="footer">
-            © Jerry Xia 2022
+            © Jerry Xia 2023
+            <a className="github" href="https://github.com/jxia3/journalism-portfolio" target="_blank">
+                <img className="github-icon" src="/github.png"></img>
+            </a>
         </footer>
         <style jsx>{`
             .footer {
@@ -149,6 +152,16 @@ const Footer = () => (
                 align-items: center;
                 border-top: 0.5px solid #000000;
                 padding: 0 max(calc(50vw - 550px), 20px);
+            }
+
+            .github {
+                margin-left: auto;
+            }
+
+            .github-icon {
+                position: relative;
+                top: 3px;
+                height: 32px;
             }
         `}</style>
     </>
