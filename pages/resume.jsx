@@ -20,7 +20,7 @@ const Resume = () => (
                         <div className="section" style={{ marginBottom: "24px" }}>
                             <h2 className="section-title">CURRENT</h2>
                             <div className="current-content">
-                                <div>Junior at Palo Alto High School</div>
+                                <div>Senior at Palo Alto High School</div>
                                 <div>Editor-in-Chief at The Campanile</div>
                             </div>
                         </div>
@@ -29,22 +29,17 @@ const Resume = () => (
                             <div className="section-item">
                                 <div className="item-title">Editor-in-Chief at The Campanile</div>
                                 <div className="date">March 2022 to present</div>
-                                <div className="item-desc">Leading and working with 30 journalists, photographers, and artists to publish a print and digital newspaper on a 4-week cycle</div>
+                                <div className="item-desc">Co-lead and worked with 30 journalists, photographers, and artists to publish an award-winning print and digital newspaper on a 4-week cycle</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Newsletter Editor at The Campanile</div>
                                 <div className="date">November 2021 to March 2022</div>
-                                <div className="item-desc">Writing, designing, and publishing newsletters delivering the latest Campanile news to subscribers every issue using Mailchimp</div>
+                                <div className="item-desc">Wrote, designed, and published newsletters delivering the latest Campanile news to subscribers every issue using Mailchimp</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Staff Writer at The Campanile</div>
                                 <div className="date">August 2021 to March 2022</div>
-                                <div className="item-desc">Interviewing sources, writing news, opinion, lifestyle, and sports articles for The Campanile and designing newspaper pages with Adobe InDesign to be printed</div>
-                            </div>
-                            <div className="section-item">
-                                <div className="item-title">Vice President at Paly Python</div>
-                                <div className="date">September 2019 to present</div>
-                                <div className="item-desc">Managing the Paly Python Club, teaching students programming and hosting hackathons, workshops and other programming-related events for the community</div>
+                                <div className="item-desc">Wrote news, opinion, lifestyle, and sports articles for The Campanile and designed newspaper pages with Adobe InDesign to be printed</div>
                             </div>
                         </div>
                     </div>
@@ -52,16 +47,16 @@ const Resume = () => (
                         <div className="section" style={{ marginBottom: "24px" }}>
                             <h2 className="section-title">SKILLS</h2>
                             <div className="section-item">
-                                <div className="item-title">News Writing</div>
-                                <div className="item-desc">Gathering interview from sources, writing news stories and editing articles for publication</div>
+                                <div className="item-title">News Writing & Editing</div>
+                                <div className="item-desc">Gathered interview from sources, wrote news stories and edited articles for publication</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Adobe InDesign & Illustrator</div>
-                                <div className="item-desc">Using the Adobe stack to create graphics and design professional pages and page layouts</div>
+                                <div className="item-desc">Used the Adobe stack to create graphics and design professional pages and page layouts</div>
                             </div>
                             <div className="section-item">
                                 <div className="item-title">Web Development & React.js</div>
-                                <div className="item-desc">Designing and building websites with HTML, CSS and JavaScript and creating responsive, stateful web applications with React.js and Next.js</div>
+                                <div className="item-desc">Designed and built websites with HTML, CSS and JavaScript and created responsive, stateful web applications with React.js and Next.js</div>
                             </div>
                         </div>
                         <div className="section">
@@ -72,7 +67,7 @@ const Resume = () => (
                             </div>
                             <div className="section-item">
                                 <div className="item-title">AP Computer Science A</div>
-                                <div className="date">Palo Alto High School, in progress</div>
+                                <div className="date">Palo Alto High School, completed June 2022</div>
                             </div>
                         </div>
                     </div>
