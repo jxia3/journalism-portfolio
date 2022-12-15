@@ -9,11 +9,7 @@ const Resume = () => (
         <Layout>
             <div className="resume">
                 <h1 className="title">JERRY XIA</h1>
-                <div className="info">
-                    Palo Alto High School
-                    <div className="splitter">•</div>
-                    jx41509@pausd.us
-                </div>
+                <div className="info">Palo Alto High School</div>
                 <div className="divider"></div>
                 <div className="content">
                     <div className="left">
@@ -91,12 +87,6 @@ const Resume = () => (
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
-                }
-
-                .splitter {
-                    display: inline-block;
-                    font-size: 0.9rem;
-                    margin: 0 12px;
                 }
 
                 .divider {
@@ -205,11 +195,6 @@ const Resume = () => (
 
                     .info {
                         font-size: 0.9rem;
-                    }
-
-                    .splitter {
-                        font-size: 0.7rem;
-                        margin: 0 6px;
                     }
                 }
             `}</style>
