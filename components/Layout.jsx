@@ -60,10 +60,10 @@ const NavBar = () => (
                 </a>
             </Link>
             <div className="links">
-                <NavLink name="STAFF PAGE" href="https://thecampanile.org/author/jerryxia" external></NavLink>
                 <NavLink name="STORIES" href="/stories"></NavLink>
                 <NavLink name="RESUME" href="/resume"></NavLink>
                 <NavLink name="REFLECTIONS" href="/reflections"></NavLink>
+                <NavLink name="STAFF PAGE" href="https://thecampanile.org/author/jerryxia" external></NavLink>
             </div>
         </nav>
         <style jsx>{`

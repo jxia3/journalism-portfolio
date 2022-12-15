@@ -44,13 +44,13 @@ const Home = () => (
             <div className="desc">JOURNALISM PORTFOLIO</div>
             <div className="divider"></div>
             <div className="links">
-                <PageLink name="STAFF PAGE" href="https://thecampanile.org/author/jerryxia" external></PageLink>
-                <div className="link-divider">•</div>
                 <PageLink name="STORIES" href="/stories"></PageLink>
                 <div className="link-divider">•</div>
                 <PageLink name="RESUME" href="/resume"></PageLink>
                 <div className="link-divider">•</div>
                 <PageLink name="REFLECTIONS" href="/reflections"></PageLink>
+                <div className="link-divider">•</div>
+                <PageLink name="STAFF PAGE" href="https://thecampanile.org/author/jerryxia" external></PageLink>
             </div>
             <img className="center expand-left" src="/bars.svg"></img>
             <img className="center expand-right" src="/bars.svg"></img>
