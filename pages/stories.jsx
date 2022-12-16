@@ -1,4 +1,4 @@
-// Files and modules
+// Imports
 
 import stories from "../data/stories.json"
 import useWindowSize from "../helpers/useWindowSize"

@@ -1,4 +1,4 @@
-// Files and modules
+// Imports
 
 import { split } from "../helpers/text.js"
 

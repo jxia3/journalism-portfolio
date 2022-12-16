@@ -1,4 +1,4 @@
-// Files and modules
+// Imports
 
 import Layout from "../components/Layout"
 import SplitQuote from "../components/SplitQuote.jsx"
@@ -19,7 +19,7 @@ const Reflections = ({ content }) => (
                             {split(content.major)}
                             <div className="quote">
                                 <div className="quote-line"></div>
-                                The dissemination of truthful and relevant information is critical in the digital era.
+                                The past four issues have been exciting, fun, stressful, nerve-racking, and a thousand other things in between.
                                 <div className="quote-line"></div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ const Reflections = ({ content }) => (
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 24px max(calc(50vw - 550px), 20px) 72px max(calc(50vw - 550px), 20px);
+                padding: 36px max(calc(50vw - 550px), 20px) 72px max(calc(50vw - 550px), 20px);
             }
 
             .landing {
@@ -105,7 +105,7 @@ const Reflections = ({ content }) => (
 
             .quote {
                 width: 100%;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin: 24px 0;
             }
 
@@ -170,7 +170,7 @@ const Reflections = ({ content }) => (
             @media only screen and (max-height: 1000px) {
                 .landing {
                     padding-bottom: 0;
-                    margin-bottom: 64px;
+                    margin-bottom: 52px;
                 }
                 
                 .major {
@@ -204,14 +204,15 @@ const Reflections = ({ content }) => (
 export async function getStaticProps() {
     // Get reflection text
 
-    const directory = "data/2022A"
-    const [ major, writing, design, leadership, marketing, literacy ] = await Promise.all([
+    const directory = "data/2022B"
+    const [ major, leader, writing, design, leadership, marketing, literacy ] = await Promise.all([
         readFile(directory + "/major.txt"),
-        readFile(directory + "/writing.txt"),
-        readFile(directory + "/design.txt"),
-        readFile(directory + "/leadership.txt"),
-        readFile(directory + "/marketing.txt"),
-        readFile(directory + "/literacy.txt")
+        readFile(directory + "/leader.txt"),
+        readFile("data/2022A" + "/writing.txt"),
+        readFile("data/2022A" + "/design.txt"),
+        readFile("data/2022A" + "/leadership.txt"),
+        readFile("data/2022A" + "/marketing.txt"),
+        readFile("data/2022A" + "/literacy.txt")
     ])
 
     // Page properties
@@ -221,6 +222,7 @@ export async function getStaticProps() {
             page: "Reflections",
             content: {
                 major,
+                leader,
                 writing,
                 design,
                 leadership,

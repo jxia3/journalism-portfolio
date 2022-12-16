@@ -1,4 +1,4 @@
-// Files and modules
+// Imports
 
 import Head from "next/head"
 
