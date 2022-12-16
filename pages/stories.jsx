@@ -125,7 +125,7 @@ const Stories = () => (
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 40px;
-                padding: 24px max(calc(50vw - 550px), 20px);
+                padding: 24px max(calc(50vw - 550px), 20px) 48px max(calc(50vw - 550px), 20px);
             }
 
             .title {
