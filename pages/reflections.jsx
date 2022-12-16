@@ -1,9 +1,10 @@
 // Imports
 
 import Layout from "../components/Layout"
-import SplitQuote from "../components/SplitQuote.jsx"
-import SplitDesign from "../components/SplitDesign.jsx"
-import Column from "../components/Column.jsx"
+import Block from "../components/reflections/Block.jsx"
+import SplitQuote from "../components/reflections/SplitQuote.jsx"
+import SplitDesign from "../components/reflections/SplitDesign.jsx"
+import Column from "../components/reflections/Column.jsx"
 import { readFile, split } from "../helpers/text.js"
 
 // Reflections page
@@ -25,6 +26,7 @@ const Reflections = ({ content }) => (
                         </div>
                     </div>
                 </div>
+                <Block section="BEING A LEADER" text={content.leader}></Block>
                 <SplitQuote
                     section="WRITING AND REPORTING"
                     text={content.writing}

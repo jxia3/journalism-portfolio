@@ -1,7 +1,7 @@
 // Imports
 
 import Reflection from "./Reflection.jsx"
-import { split } from "../helpers/text.js"
+import { split } from "../../helpers/text.js"
 
 // Split quote reflection component
 

@@ -1,6 +1,6 @@
 // Imports
 
-import { split } from "../helpers/text.js"
+import { split } from "../../helpers/text.js"
 
 // Column reflection component
 
