@@ -7,8 +7,8 @@ import { useEffect, useState } from "react"
 function useWindowSize() {
     const isServer = typeof window === "undefined"
     const [ windowSize, setWindowSize ] = useState({
-        width: isServer ? 0 : window.innerWidth,
-        height: isServer ? 0 : window.innerHeight
+        width: isServer ? 1500 : window.innerWidth,
+        height: isServer ? 1000 : window.innerHeight
     })
 
     useEffect(() => {
