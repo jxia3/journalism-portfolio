@@ -2,7 +2,7 @@
 
 import Layout from "../components/Layout"
 import Block from "../components/reflections/Block.jsx"
-import SplitQuote from "../components/reflections/SplitQuote.jsx"
+import SplitQuoteSide from "../components/reflections/SplitQuoteSide.jsx"
 import SplitDesign from "../components/reflections/SplitDesign.jsx"
 import Column from "../components/reflections/Column.jsx"
 import { readFile, split } from "../helpers/text.js"
@@ -27,21 +27,21 @@ const Reflections = ({ content }) => (
                     </div>
                 </div>
                 <Block section="BEING A LEADER" text={content.leader}></Block>
-                <SplitQuote
+                <SplitQuoteSide
                     section="WRITING AND REPORTING"
                     text={content.writing}
-                    image="/electric.png"
+                    image="/timothy-alexander.jpg"
                     story={{
-                        title: "Council plans $150 million electric grid renovation",
-                        info: "The Campanile 2022 Issue 7",
-                        desc: "Facing limited grid capacity and aging infrastructure, Palo Alto's Utility Advisory Commission is pushing to modernize the city's electric grid to meet the city's electrification and emission reduction goals.",
-                        link: "https://thecampanile.org/2022/04/09/council-plans-150-million-electric-grid-renovation"
+                        title: "Timothy Alexander returns to address seniors",
+                        info: "Breaking News, The Campanile 2022",
+                        desc: "Motivational speaker Timothy Alexander spoke in the PAC during study hall on Nov. 4, reminding seniors to challenge themselves to excel under pressure and enjoy their senior year.",
+                        link: "https://thecampanile.org/2022/11/04/timothy-alexander-returns-to-address-seniors-challenges-students-to-succeed-under-pressure"
                     }}
                     quote={{
-                        text: "That's what we're going to need to do to achieve those really ambitious goals that we need to achieve to control worldwide climate change.",
-                        author: "Jonathan Abendschein, assistant director of Utility Resource Management"
+                        text: "Remember, we don't need it to be easy. We just need it to be possible.",
+                        author: "Timothy Alexander, motivational speaker"
                     }}
-                ></SplitQuote>
+                ></SplitQuoteSide>
                 <SplitDesign
                     section="DESIGN"
                     text={content.design}
@@ -54,14 +54,8 @@ const Reflections = ({ content }) => (
                         text={content.leadership}
                     ></Column>
                     <Column
-                        section="MARKETING"
+                        section="ETHICS"
                         text={content.marketing}
-                        link="https://mailchi.mp/d1220115eccd/the-campanile-issue-5-newsletter-6804905"
-                    ></Column>
-                    <Column
-                        section="NEWS LITERACY"
-                        text={content.literacy}
-                        link="https://thecampanile.org/2021/11/19/ravenswood-school-district-to-lease-unused-east-palo-alto-properties"
                     ></Column>
                 </div>
             </div>

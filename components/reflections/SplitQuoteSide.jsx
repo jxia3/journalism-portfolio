@@ -5,7 +5,7 @@ import { split } from "../../helpers/text.js"
 
 // Split quote reflection component
 
-const SplitQuote = ({ section, text, image, story, quote }) => (
+const SplitQuoteSide = ({ section, text, image, story, quote }) => (
     <>
         <Reflection section={section}>
             <div className="text">{split(text)}</div>
@@ -48,11 +48,11 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                gap: 16px;
+                gap: 24px;
             }
 
             .image {
-                width: 40%;
+                width: 53%;
                 height: 100%;
                 object-fit: contain;
             }
@@ -115,23 +115,27 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
             }
 
             @media only screen and (max-width: 1000px) {
+                .image {
+                    width: 45%;
+                }
+
                 .story-desc {
                     margin: 16px 0;
                 }
             }
 
-            @media only screen and (max-width: 700px) {
+            @media only screen and (max-width: 800px) {
                 .text {
                     width: 35%;
                 }
-                
+
                 .story {
                     flex-direction: column;
                 }
 
                 .image {
                     width: 100%;
-                    height: 150px;
+                    height: 200px;
                 }
 
                 .story-link {
@@ -144,6 +148,12 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
 
                 .quote-by {
                     margin-top: 8px;
+                }
+            }
+
+            @media only screen and (max-width: 650px) {
+                .text {
+                    width: 40%;
                 }
             }
 
@@ -162,4 +172,4 @@ const SplitQuote = ({ section, text, image, story, quote }) => (
 
 // Exports
 
-export default SplitQuote
+export default SplitQuoteSide
