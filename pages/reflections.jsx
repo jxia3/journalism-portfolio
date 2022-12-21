@@ -45,8 +45,8 @@ const Reflections = ({ content }) => (
                 <SplitDesign
                     section="DESIGN"
                     text={content.design}
-                    preview="/C1-2022-7.png"
-                    link="https://issuu.com/palycampanile/docs/the_campanile_4-1-22/16"
+                    preview="/A1-2022-2.png"
+                    link="https://issuu.com/palycampanile/docs/the_campanile_10-18-22"
                 ></SplitDesign>
                 <div className="columns">
                     <Column
@@ -55,7 +55,7 @@ const Reflections = ({ content }) => (
                     ></Column>
                     <Column
                         section="ETHICS"
-                        text={content.marketing}
+                        text={content.ethics}
                     ></Column>
                 </div>
             </div>
@@ -201,14 +201,13 @@ export async function getStaticProps() {
     // Get reflection text
 
     const directory = "data/2022B"
-    const [ major, leader, writing, design, leadership, marketing, literacy ] = await Promise.all([
+    const [ major, leader, writing, design, leadership, ethics ] = await Promise.all([
         readFile(directory + "/major.txt"),
         readFile(directory + "/leader.txt"),
-        readFile("data/2022A" + "/writing.txt"),
-        readFile("data/2022A" + "/design.txt"),
+        readFile(directory + "/writing.txt"),
+        readFile(directory + "/design.txt"),
         readFile("data/2022A" + "/leadership.txt"),
-        readFile("data/2022A" + "/marketing.txt"),
-        readFile("data/2022A" + "/literacy.txt")
+        readFile("data/2022A" + "/marketing.txt")
     ])
 
     // Page properties
@@ -222,8 +221,7 @@ export async function getStaticProps() {
                 writing,
                 design,
                 leadership,
-                marketing,
-                literacy
+                ethics
             }
         }
     }
