@@ -207,7 +207,7 @@ export async function getStaticProps() {
         readFile(directory + "/writing.txt"),
         readFile(directory + "/design.txt"),
         readFile("data/2022A" + "/leadership.txt"),
-        readFile("data/2022A" + "/marketing.txt")
+        readFile(directory + "/ethics.txt")
     ])
 
     // Page properties
