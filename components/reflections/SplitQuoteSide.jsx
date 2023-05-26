@@ -22,7 +22,7 @@ const SplitQuoteSide = ({ section, text, image, story, quote }) => (
                 <div className="quote">
                     <div className="quote-line"></div>
                     "{quote.text}"
-                    <div className="quote-by">- {quote.author}</div>
+                    {quote.author ? <div className="quote-by">- {quote.author}</div> : <></>}
                     <div className="quote-line"></div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const SplitQuoteSide = ({ section, text, image, story, quote }) => (
             }
 
             .image {
-                width: 53%;
+                width: 42%;
                 height: 100%;
                 object-fit: contain;
             }
@@ -88,7 +88,7 @@ const SplitQuoteSide = ({ section, text, image, story, quote }) => (
 
             .quote {
                 width: 100%;
-                font-size: 2rem;
+                font-size: 1.8rem;
                 margin: 24px 0;
             }
 
@@ -143,7 +143,7 @@ const SplitQuoteSide = ({ section, text, image, story, quote }) => (
                 }
 
                 .quote {
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                 }
 
                 .quote-by {

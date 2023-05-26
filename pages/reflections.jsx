@@ -20,7 +20,7 @@ const Reflections = ({ content }) => (
                             {split(content.major)}
                             <div className="quote">
                                 <div className="quote-line"></div>
-                                The past four issues have been exciting, fun, stressful, nerve-racking, and a thousand other things in between.
+                                I’m immensely thankful that I had the opportunity to lead a group of passionate students on an amazing publication.
                                 <div className="quote-line"></div>
                             </div>
                         </div>
@@ -30,23 +30,22 @@ const Reflections = ({ content }) => (
                 <SplitQuoteSide
                     section="WRITING AND REPORTING"
                     text={content.writing}
-                    image="/timothy-alexander.jpg"
+                    image="/meatballs.jpg"
                     story={{
-                        title: "Timothy Alexander returns to address seniors",
-                        info: "Breaking News, The Campanile 2022",
-                        desc: "Motivational speaker Timothy Alexander spoke in the PAC during study hall on Nov. 4, reminding seniors to challenge themselves to excel under pressure and enjoy their senior year.",
-                        link: "https://thecampanile.org/2022/11/04/timothy-alexander-returns-to-address-seniors-challenges-students-to-succeed-under-pressure"
+                        title: "IKEA: The food warehouse",
+                        info: "Lifestyle, The Campanile 2023",
+                        desc: "Offering a selection of Swedish delights at an affordable price, IKEA reminds us that a fulfilling meal doesn't always have to be expensive.",
+                        link: "https://thecampanile.org/27783/lifestyle/ikea-the-food-warehouse"
                     }}
                     quote={{
-                        text: "Remember, we don't need it to be easy. We just need it to be possible.",
-                        author: "Timothy Alexander, motivational speaker"
+                        text: "While IKEA’s cafeteria is not a gourmet restaurant, it does offer great deals on a variety of traditional Swedish dishes that lead to an enjoyable experience, even though it may lack service fit for the bourgeoisie. But, after all, IKEA was not built for the bourgeoisie."
                     }}
                 ></SplitQuoteSide>
                 <SplitDesign
                     section="DESIGN"
                     text={content.design}
-                    preview="/A1-2022-2.png"
-                    link="https://issuu.com/palycampanile/docs/the_campanile_10-18-22"
+                    preview="/A1-2023-8.png"
+                    link="https://issuu.com/palycampanile/docs/the_campanile_5-22-23"
                 ></SplitDesign>
                 <div className="columns">
                     <Column
@@ -55,7 +54,7 @@ const Reflections = ({ content }) => (
                     ></Column>
                     <Column
                         section="ETHICS"
-                        text={content.ethics}
+                        text={content.leadership}
                     ></Column>
                 </div>
             </div>
@@ -200,14 +199,13 @@ const Reflections = ({ content }) => (
 export async function getStaticProps() {
     // Get reflection text
 
-    const directory = "data/2022B"
-    const [ major, leader, writing, design, leadership, ethics ] = await Promise.all([
+    const directory = "data/2023A"
+    const [ major, leader, writing, design, leadership ] = await Promise.all([
         readFile(directory + "/major.txt"),
         readFile(directory + "/leader.txt"),
         readFile(directory + "/writing.txt"),
         readFile(directory + "/design.txt"),
-        readFile(directory + "/leadership.txt"),
-        readFile(directory + "/ethics.txt")
+        readFile(directory + "/leadership.txt")
     ])
 
     // Page properties
@@ -220,8 +218,7 @@ export async function getStaticProps() {
                 leader,
                 writing,
                 design,
-                leadership,
-                ethics
+                leadership
             }
         }
     }
