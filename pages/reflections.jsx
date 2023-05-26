@@ -54,7 +54,7 @@ const Reflections = ({ content }) => (
                     ></Column>
                     <Column
                         section="ETHICS"
-                        text={content.leadership}
+                        text={content.ethics}
                     ></Column>
                 </div>
             </div>
@@ -200,12 +200,13 @@ export async function getStaticProps() {
     // Get reflection text
 
     const directory = "data/2023A"
-    const [ major, leader, writing, design, leadership ] = await Promise.all([
+    const [ major, leader, writing, design, leadership, ethics ] = await Promise.all([
         readFile(directory + "/major.txt"),
         readFile(directory + "/leader.txt"),
         readFile(directory + "/writing.txt"),
         readFile(directory + "/design.txt"),
-        readFile(directory + "/leadership.txt")
+        readFile(directory + "/leadership.txt"),
+        readFile(directory + "/ethics.txt")
     ])
 
     // Page properties
@@ -218,7 +219,8 @@ export async function getStaticProps() {
                 leader,
                 writing,
                 design,
-                leadership
+                leadership,
+                ethics
             }
         }
     }
