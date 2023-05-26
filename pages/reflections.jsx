@@ -20,7 +20,7 @@ const Reflections = ({ content }) => (
                             {split(content.major)}
                             <div className="quote">
                                 <div className="quote-line"></div>
-                                I’m immensely thankful that I had the opportunity to lead a group of passionate students on an amazing publication.
+                                I'm immensely thankful that I had the opportunity to lead a group of passionate students on an amazing publication.
                                 <div className="quote-line"></div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ const Reflections = ({ content }) => (
                         link: "https://thecampanile.org/27783/lifestyle/ikea-the-food-warehouse"
                     }}
                     quote={{
-                        text: "While IKEA’s cafeteria is not a gourmet restaurant, it does offer great deals on a variety of traditional Swedish dishes that lead to an enjoyable experience, even though it may lack service fit for the bourgeoisie. But, after all, IKEA was not built for the bourgeoisie."
+                        text: "While IKEA's cafeteria is not a gourmet restaurant, it does offer great deals on a variety of traditional Swedish dishes that lead to an enjoyable experience, even though it may lack service fit for the bourgeoisie. But, after all, IKEA was not built for the bourgeoisie."
                     }}
                 ></SplitQuoteSide>
                 <SplitDesign
@@ -51,10 +51,12 @@ const Reflections = ({ content }) => (
                     <Column
                         section="LEADERSHIP"
                         text={content.leadership}
+                        link="https://thecampanile.org/27435/spotlight/not-another-know-it-ail_"
                     ></Column>
                     <Column
                         section="ETHICS"
                         text={content.ethics}
+                        link="https://thecampanile.org/28818/lifestyle/musk-alters-twitter-work-culture-content"
                     ></Column>
                 </div>
             </div>
